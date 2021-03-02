@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 
+source_str='source shared/projectx/project.bashrc'
 for bashrc_file in *.bashrc; do
     sed -i -e "\|$source_str|h;"     `# Search for the source string and copy it to the hold space`       \
            -e "\${"                  `# Go to the end of the file and run the following commands`         \
