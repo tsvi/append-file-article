@@ -9,5 +9,5 @@ for bashrc_file in *.bashrc; do
            -e "{g;"                  `# Bring back the last line`                                         \
            -e "t};"                  `# Test if the substitution succeeded (the source string was found)` \
            -e "a\\" -e "$source_str" `# Append the source string if we didn't move to the next cycle`     \
-           -e "}" $bashrc_file
+           -e "}" $bashrc_file &
 done
